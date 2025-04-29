@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us- Safeornis</title>
+    <meta
+      name="description"
+      content="Learn more about Safeornis, our mission, and how we help businesses grow with custom-coded websites."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./cc-Logo.png" />
+
+    <style>
+      :root {
+        --bg-light: #ffffff;
+        --bg-dark: #000000;
+        --text-light: #f9f9f9;
+        --text-dark: #1a1a1a;
+        --accent: #fff;
+        --padding-x: 10vw;
+        --max-width: 1400px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Outfit", sans-serif;
+        background-color: var(--bg-dark);
+        color: var(--text-light);
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem var(--padding-x);
+        background-color: var(--bg-dark);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .logo {
+        font-size: 2rem;
+        font-weight: 800;
+        color: var(--accent);
+      }
+
+      nav {
+        display: flex;
+        gap: 2rem;
+      }
+
+      nav a {
+        color: var(--text-light);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: var(--accent);
+      }
+
+      section {
+        padding: 8rem var(--padding-x);
+        position: relative;
+        max-width: var(--max-width);
+        margin: auto;
+        overflow: hidden;
+      }
+
+      h2 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+        color: var(--accent);
+        text-align: center;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #ccc;
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .cut-top {
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+        background: var(--bg-light);
+        color: var(--text-dark);
+      }
+
+      .cut-bottom {
+        clip-path: polygon(0 0, 100% 0%, 100% 95%, 0% 100%);
+        background: var(--bg-dark);
+        color: var(--text-light);
+      }
+
+      .cut-white {
+        background-color: var(--bg-light);
+        color: var(--text-dark);
+        background-image: url(./service.jpg);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease-out;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .cut-top cut-white reveal h2 {
+        color: #000000;
+      }
+      .section-img {
+        width: 100%;
+        max-width: 700px;
+        margin: 2rem auto;
+        display: block;
+        border-radius: 1rem;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        transition: transform 0.5s ease;
+      }
+
+      .section-img:hover {
+        transform: scale(1.03);
+      }
+
+      footer {
+        background-color: #111;
+        color: #ccc;
+        text-align: center;
+        padding: 3rem var(--padding-x);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        section {
+          padding: 5rem 5vw;
+        }
+
+        h2 {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">Safeornis</div>
+      <nav>
+        <a href="#vision">Vision</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Vision Section -->
+    <section class="cut-bottom reveal" id="vision">
+      <h2>Our Vision</h2>
+      <img src="./work/vsision.jpg" alt="Vision" class="section-img" />
+      <p>
+        <!-- Replace this with your actual 500 words -->
+        We are on a mission to reshape the future of digital branding through
+        art, code, and innovation. Our vision is to deliver not only
+        aesthetically beautiful websites but also functional, scalable platforms
+        that can grow with our clients. We believe the web is more than a place
+        for presence; it’s an opportunity to connect, build relationships, and
+        convert visitors into loyal customers. Whether you're a small business,
+        a startup, or an enterprise, we tailor digital solutions that empower
+        your goals and elevate your digital journey. At Safeornis, creativity
+        meets performance.
+      </p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="cut-top cut-white reveal" id="services">
+      <h2>Our Services</h2>
+
+      <p>
+        <!-- Replace this with your actual 500 words -->
+        We offer custom-coded websites, responsive UI/UX designs, SEO
+        optimization, eCommerce development, and more. Every service is rooted
+        in the belief that your website should work like a machine –
+        streamlined, fast, and built to convert. From clean HTML structures to
+        modular CSS and optimized JavaScript interactions, our development
+        process ensures speed, clarity, and user engagement. You don't just get
+        a site – you get a performance engine that powers your brand’s digital
+        future.
+      </p>
+    </section>
+
+    <!-- Process Section -->
+    <section class="cut-bottom reveal" id="process">
+      <h2>Our Process</h2>
+
+      <p>
+        <!-- Replace this with your actual 500 words -->
+        Every project follows a well-defined 4-step path: Discovery, Design,
+        Development, and Deployment. We start with your goals, map them into a
+        visual strategy, and then build the vision with clean, custom code.
+        Testing and performance audits are part of our DNA. We finish with a
+        polished launch, SEO groundwork, and ongoing support to make sure you’re
+        growing continuously. This process is designed to simplify complexity
+        and empower clarity.
+      </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="cut-bottom reveal" id="contact">
+      <h2>Let’s Connect</h2>
+      <img src="./work/conatct.jpg" alt="Contact" class="section-img" />
+      <p>
+        <!-- Replace this with your actual 500 words -->
+        Ready to build something amazing together? We’re just one click away.
+        Whether you have a basic idea, a full project outline, or just want to
+        explore your options — we’re happy to chat. We believe in listening
+        first, strategizing second, and delivering third. Book a free
+        consultation call and let’s get started building your brand’s digital
+        future. Your goals deserve a platform as powerful as your vision.
+      </p>
+    </section>
+
+    <footer>&copy; 2025 Safeornis Agency. All rights reserved.</footer>
+
+    <script>
+      const reveals = document.querySelectorAll(".reveal");
+
+      const options = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
+
+      reveals.forEach((reveal) => {
+        observer.observe(reveal);
+      });
+      document.addEventListener("contextmenu", (e) => e.preventDefault());
+      document.onkeydown = function (e) {
+        if (
+          e.key === "F12" ||
+          (e.ctrlKey &&
+            e.shiftKey &&
+            (e.key === "I" || e.key === "C" || e.key === "J")) ||
+          (e.ctrlKey && e.key === "U")
+        ) {
+          return false;
+        }
+      };
+    </script>
+  </body>
+</html>

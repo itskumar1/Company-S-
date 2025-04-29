@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safeornis Agency</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./cc-Logo.png" />
+    <meta
+      name="description"
+      content="Explore Safeornis web development services, including custom-coded websites, SEO optimization, responsive design, and advanced features tailored for real estate, eCommerce, and professional businesses."
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background: #fff;
+        color: #000;
+        scroll-behavior: smooth;
+      }
+
+      header {
+        background-color: #000;
+        color: white;
+        padding: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+      }
+
+      header img {
+        height: 40px;
+        margin-right: 10px;
+      }
+
+      nav {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        position: relative;
+      }
+
+      nav a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -3px;
+        left: 0;
+        background-color: white;
+        transition: 0.3s;
+      }
+
+      nav a:hover::after {
+        width: 100%;
+      }
+
+      section {
+        padding: 100px 40px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        background: #fff;
+      }
+
+      section:nth-child(even) {
+        background: #f4f4f4;
+      }
+
+      .cut-top {
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+      }
+
+      .cut-bottom {
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+      }
+
+      .section-img {
+        width: 20%;
+        max-width: auto;
+        height: 20%;
+        margin: 2rem auto;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+      }
+
+      .section-img:hover {
+        transform: scale(1.05);
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(80px);
+        transition: all 0.8s ease;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      footer {
+        background: #000;
+        color: white;
+        text-align: center;
+        padding: 60px 20px;
+      }
+
+      h2 {
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .service-card {
+        background: #fff;
+        border: 2px solid #000;
+        padding: 2rem;
+        border-radius: 30px;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        position: relative;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .service-card::before {
+        content: "";
+        position: absolute;
+        top: -15px;
+        left: -15px;
+        width: 50px;
+        height: 50px;
+        background: #000;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="./C-LOGO.jpg" alt="Logo" />
+        <a href="#hero">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="hero" class="cut-bottom reveal">
+      <h2>Welcome to Safeornis</h2>
+      <img src="./C-LOGO.jpg" class="section-img" alt="Welcome Image" />
+      <p>
+        At <strong>SAFEORNIS</strong>, we believe in shaping a future where
+        innovation meets impact. Our vision is to be the catalyst that
+        transforms ideas into reality, driving progress across industries and
+        communities. We are committed to delivering cutting-edge solutions that
+        empower businesses to thrive in a rapidly evolving world.
+      </p>
+      <p>
+        With a passion for excellence and a dedication to integrity, we partner
+        with you to unlock new possibilities and achieve sustainable growth. Our
+        team of experts harnesses the latest technologies and insights to create
+        value that lasts.
+      </p>
+      <b
+        ><p>
+          Join us on this journey to redefine success — where your goals become
+          our mission, and together, we build a brighter, smarter future.
+        </p>
+      </b>
+
+      <h2 class="slogan">Innovate. Inspire. Impact.</h2>
+    </section>
+
+    <section id="services" class="cut-top cut-bottom reveal">
+      <h2>Our Services</h2>
+      <img src="./work/service.jpg" class="section-img" alt="Services Image" />
+      <p>
+        <strong>SAFEORNIS</strong> is a forward-thinking leader in
+        <em>[industry/sector]</em>, committed to delivering innovative solutions
+        that drive transformation and growth. Founded on the principles of
+        integrity, creativity, and customer-centricity, we strive to exceed
+        expectations and create lasting partnerships.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">Web Development</div>
+        <div class="service-card">Custom Design</div>
+        <div class="service-card">SEO Optimization</div>
+        <div class="service-card">Performance Audit</div>
+      </div>
+    </section>
+
+    <section id="about" class="cut-top cut-bottom reveal">
+      <h2>About Us</h2>
+      <img src="./C-LOGO.jpg" class="section-img" alt="About Image" />
+      <p>
+        To be the world’s most trusted partner in innovation, empowering
+        organizations to reach their full potential through technology and
+        expertise.
+      </p>
+
+      <h3>Key Highlights</h3>
+      <ul>
+        <li>Cutting-edge technology solutions tailored to your needs</li>
+        <li>Dedicated team of industry experts and innovators</li>
+        <li>Commitment to sustainability and ethical business practices</li>
+        <li>Proven track record of delivering measurable results</li>
+        <li>Customer-first approach with personalized support</li>
+      </ul>
+    </section>
+    <!-- How We Make You the Top Section -->
+    <section id="how-we-make-you-top" class="how-we-make-you-top-section">
+      <div class="container">
+        <h2>How We Make You the Top</h2>
+        <p>
+          At <strong>Safeonris</strong>, your success is our priority. We
+          combine deep industry knowledge with innovative strategies to elevate
+          your business above the competition. Our approach is holistic — from
+          understanding your unique challenges to crafting customized solutions
+          that drive growth and efficiency.
+        </p>
+        <p>
+          We leverage advanced analytics, agile methodologies, and continuous
+          improvement to ensure you stay ahead in a dynamic market. Our expert
+          team works closely with you to optimize operations, enhance customer
+          experiences, and unlock new revenue streams.
+        </p>
+        <p>
+          With us, you don’t just compete — you lead. Together, we transform
+          potential into performance, making you the top choice in your
+          industry.
+        </p>
+      </div>
+    </section>
+    <section id="contact" class="cut-top cut-bottom reveal">
+      <h2>Let’s Connect</h2>
+      <img src="./work/conatct.jpg" class="section-img" alt="Contact Image" />
+      <p>Ready to elevate your business to new heights?</p>
+      <p>
+        <strong
+          >Let’s connect and start building your success story today!</strong
+        >
+      </p>
+    </section>
+
+    <footer>&copy; 2025 Safeornis Agency. All rights reserved.</footer>
+
+    <script>
+      const reveals = document.querySelectorAll(".reveal");
+
+      function scrollReveal() {
+        reveals.forEach((el) => {
+          const top = el.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          if (top < windowHeight - 100) {
+            el.classList.add("active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", scrollReveal);
+      window.addEventListener("load", scrollReveal);
+      document.addEventListener("contextmenu", (e) => e.preventDefault());
+      document.onkeydown = function (e) {
+        if (
+          e.key === "F12" ||
+          (e.ctrlKey &&
+            e.shiftKey &&
+            (e.key === "I" || e.key === "C" || e.key === "J")) ||
+          (e.ctrlKey && e.key === "U")
+        ) {
+          return false;
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Safeornis</title>
+    <meta
+      name="description"
+      content="Get in touch with us for web development inquiries, project quotes, or general support. We're here to help you bring your ideas to life at Safeornis."
+    />
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./cc-Logo.png" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        background-color: #000;
+        color: #fff;
+      }
+
+      /* Centered Navbar */
+      .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px 20px;
+        background: #111;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid #333;
+      }
+
+      .nav-center {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .nav-logo {
+        font-size: 1.9rem;
+        font-weight: bold;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+      }
+
+      .nav-links li a {
+        text-decoration: none;
+        color: #ccc;
+        font-size: 1.1rem;
+        transition: all 0.3s;
+      }
+
+      .nav-links li a:hover {
+        color: white;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        padding: 100px 50px;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        max-width: 1300px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .contact-text {
+        flex: 1 1 500px;
+      }
+
+      .contact-text h2 {
+        font-size: 3.2rem;
+        margin-bottom: 30px;
+        color: white;
+        text-transform: uppercase;
+      }
+
+      .contact-text p {
+        font-size: 1.15rem;
+        line-height: 1.9;
+        margin-bottom: 40px;
+        color: #ddd;
+      }
+
+      .contact-text form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .contact-text input,
+      .contact-text textarea {
+        padding: 15px;
+        border: 2px solid #444;
+        background: transparent;
+        color: #fff;
+        font-size: 1rem;
+        border-radius: 12px;
+      }
+
+      .contact-text button {
+        padding: 15px;
+        background: #fff;
+        color: #000;
+        font-weight: bold;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .contact-text button:hover {
+        background: #ddd;
+      }
+
+      .contact-image {
+        flex: 1 1 400px;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .contact-image img {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+      }
+
+      /* Reveal Animation */
+      .reveal {
+        opacity: 0;
+        transform: translateY(60px);
+        transition: all 0.8s ease;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Footer */
+      .footer {
+        padding: 30px;
+        background: #111;
+        text-align: center;
+        color: #aaa;
+        font-size: 0.95rem;
+        border-top: 1px solid #333;
+      }
+
+      /* Floating animation */
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .contact-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .nav-center {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .nav-links {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-center">
+        <div class="nav-logo">Safeornis</div>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section reveal">
+      <div class="contact-container">
+        <div class="contact-text">
+          <h2>Contact Us</h2>
+          <p>
+            Got a project in mind or just want to say hello? We’re all ears. At
+            Safeornis, we believe in direct communication and collaborative
+            solutions. Whether you're looking to revamp your website, create a
+            custom-coded masterpiece, or need professional advice, our team is
+            ready to partner with you. Drop us a message below and let’s build
+            something powerful together.
+          </p>
+          <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea rows="6" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-image">
+          <img src="./work/conatct.jpg" alt="Contact Illustration" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2025 Safeornis. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Reveal on scroll
+      window.addEventListener("scroll", () => {
+        const reveals = document.querySelectorAll(".reveal");
+        for (let i = 0; i < reveals.length; i++) {
+          const windowHeight = window.innerHeight;
+          const revealTop = reveals[i].getBoundingClientRect().top;
+          const revealPoint = 150;
+
+          if (revealTop < windowHeight - revealPoint) {
+            reveals[i].classList.add("active");
+          }
+        }
+      });
+ document.addEventListener('contextmenu', e => e.preventDefault());
+  document.onkeydown = function(e) {
+    if (e.key === "F12" || 
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "C" || e.key === "J")) || 
+        (e.ctrlKey && e.key === "U")) {
+      return false;
+    }
+  };
+    </script>
+  </body>
+</html>

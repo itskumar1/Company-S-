@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safeornis</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./cc-Logo.png" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        background: #0e0e0e;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: "Segoe UI", sans-serif;
+        color: white;
+      }
+
+      .logo-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        background-image: url("./cc-Logo.png"); /* Replace with your logo */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 180px;
+        height: 180px;
+        animation: logoZoomIn 2s ease-out forwards;
+        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.5));
+      }
+
+      .company-name {
+        margin-top: 20px;
+        font-size: 2.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+        opacity: 0;
+        background: linear-gradient(
+          120deg,
+          #ffffff 0%,
+          #bbbbbb 40%,
+          #ffffff 60%,
+          #bbbbbb 100%
+        );
+        background-size: 200% auto;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: textShine 2.5s ease-in-out forwards 2s;
+      }
+
+      @keyframes logoZoomIn {
+        0% {
+          transform: translate(-50%, -50%) scale(0);
+          opacity: 0;
+        }
+        100% {
+          transform: translate(-50%, -50%) scale(1.6);
+          opacity: 1;
+        }
+      }
+
+      @keyframes textShine {
+        0% {
+          opacity: 0;
+          background-position: -200% center;
+        }
+        100% {
+          opacity: 1;
+          background-position: 200% center;
+        }
+      }
+
+      .zoom-out {
+        animation: finalZoom 1s ease-in forwards;
+      }
+
+      @keyframes finalZoom {
+        0% {
+          transform: translate(-50%, -50%) scale(1.6);
+          opacity: 1;
+        }
+        100% {
+          transform: translate(-50%, -50%) scale(30);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo-container" id="logo"></div>
+    <div class="company-name">SAFEORNIS</div>
+
+    <script>
+      // Start exit animation after 5s
+      setTimeout(() => {
+        document.getElementById("logo").classList.add("zoom-out");
+      }, 5000);
+
+      // Redirect after 6s
+      setTimeout(() => {
+        window.location.href = "main.html";
+      }, 6000);
+ document.addEventListener('contextmenu', e => e.preventDefault());
+  document.onkeydown = function(e) {
+    if (e.key === "F12" || 
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "C" || e.key === "J")) || 
+        (e.ctrlKey && e.key === "U")) {
+      return false;
+    }
+  };
+    </script>
+  </body>
+</html>
